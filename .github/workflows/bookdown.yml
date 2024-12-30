@@ -32,6 +32,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y pandoc
+          sudo apt-get install pandoc-citeproc
 
       - name: Build book
         run: |
