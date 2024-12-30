@@ -38,8 +38,9 @@ jobs:
         run: |
           Rscript -e "bookdown::render_book(output_format = 'bookdown::bs4_book')"
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages 
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_book
+          publish_branch: gh-pages
