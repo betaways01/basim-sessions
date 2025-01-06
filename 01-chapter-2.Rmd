@@ -23,7 +23,7 @@ Each vector feature consists of:
 - **Attributes**: Provides information about the feature, such as species name or elevation.
 
 #### Example: Reading and Plotting Vector Data in R
-```r
+```{r}
 # Load required packages
 library(sp)
 library(rgdal)
@@ -43,7 +43,7 @@ Raster data represents continuous phenomena such as temperature, elevation, or l
 - **Resolution**: The size of each pixel, determining the level of detail.
 
 #### Example: Reading and Plotting Raster Data in R
-```r
+```{r}
 # Load required package
 library(raster)
 
@@ -65,7 +65,7 @@ A coordinate reference system (CRS) defines how spatial data relates to location
 2. **Projected CRS**: Converts Earth's 3D surface into a flat 2D plane, often used for detailed regional analyses (e.g., UTM, Albers Equal Area).
 
 ### Example: Reprojecting Data in R
-```r
+```{r}
 # Reprojecting vector data
 reprojected_vector <- spTransform(vector_data, CRS("+proj=utm +zone=33 +datum=WGS84"))
 
@@ -86,7 +86,7 @@ Several R packages facilitate spatial data handling:
 ### Example: Creating a Raster Stack
 A raster stack combines multiple raster layers into a single object for analysis.
 
-```r
+```{r}
 # Creating a raster stack
 raster_stack <- stack("path/to/raster1.tif", "path/to/raster2.tif")
 
@@ -102,7 +102,7 @@ When working with multiple rasters, it is crucial to ensure they have:
 2. **Matching Extent**: Identical spatial coverage.
 
 ### Example: Resampling Rasters in R
-```r
+```{r}
 # Aligning resolution and extent
 aligned_raster <- resample(raster_data, reference_raster, method = "bilinear")
 ```
@@ -120,7 +120,7 @@ aligned_raster <- resample(raster_data, reference_raster, method = "bilinear")
 4. Create a raster stack for analysis.
 
 ### Example Code
-```r
+```{r}
 # Load libraries
 library(rgdal)
 library(raster)
